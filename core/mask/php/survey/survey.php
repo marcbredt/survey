@@ -64,7 +64,8 @@
   </tr>
   <tr>
     <td>
-      <?
+      <?php
+      
         // questions data
         $x = new XMLDocument("../conf/statements.xml",
                              "../conf/dtd/statements.dtd",true);

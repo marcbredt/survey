@@ -100,7 +100,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Max','Mustermann','max@mustermann.de','ebdb1656ffd5b099252c533e9ad42d11'),(2,'Rudi','Testmann','rudi@testmann.com','3d82c14b83ec3dad46f2f6b2fe7f09e8');
+INSERT INTO `user` VALUES (1,'Max','Mustermann','max@mustermann.de','0cc175b9c0f1b6a831c399e269772661'),(2,'Rudi','Testmann','rudi@testmann.com','92eb5ffee6ae2fec3ad71c777531578f');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

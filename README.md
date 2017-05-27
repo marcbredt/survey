@@ -40,6 +40,9 @@ Demonstration
     is thrown try to throw a PDOException by e.g. shutting down the mysql
     database
   * you then should see an error popping up
+* test users
+  * max@mustermann.de - passwort: "a"
+  * rudi@testmann.com - passwort: "b"
 
 Conventions
 -----------
