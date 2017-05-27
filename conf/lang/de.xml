@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<root>
+  <language id="de">
+    <element active="y" name="hello">Willkommen</element>
+    <element active="y" name="error">Fehler</element>
+    <element active="y" name="sessionid">Sitzungs-Kennung</element>
+    <element active="y" name="trace">Ursache</element>
+    <element active="y" name="user">Benutzer</element>
+    <element active="y" name="pass">Passwort</element>
+    <element active="y" name="login">Einloggen</element>
+    <element active="y" name="logout">Ausloggen</element>
+    <element active="y" name="language">Sprache</element>
+    <element active="y" name="survey">Umfrage</element>
+    <element active="y" name="change">wechseln</element>
+    <element active="y" name="start">starten</element>
+    <element active="y" name="abort">abbrechen</element>
+    <element active="y" name="submit">absenden</element>
+    <element active="y" name="confirm">bestätigen</element>
+    <element active="y" name="page">Seite</element>
+  </language>
+</root>

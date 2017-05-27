@@ -1,0 +1,16 @@
+<!ELEMENT root (directories*,languages+,requestkeys*,querykeys*)>
+<!ELEMENT directories (directory*)>
+<!ELEMENT directory EMPTY>
+<!ATTLIST directory name CDATA #REQUIRED path CDATA #REQUIRED>
+<!ELEMENT languages (language+)>
+<!ATTLIST languages default CDATA #REQUIRED>
+<!ELEMENT language EMPTY>
+<!ATTLIST language active CDATA #REQUIRED name CDATA #REQUIRED>
+<!ELEMENT requestkeys (requestkey*)>
+<!ELEMENT requestkey EMPTY>
+<!ATTLIST requestkey name CDATA #REQUIRED value CDATA #REQUIRED>
+<!ELEMENT querykeys (querykey*)>
+<!ELEMENT querykey EMPTY>
+<!ATTLIST querykey name CDATA #REQUIRED methods CDATA #REQUIRED 
+                   value CDATA #REQUIRED>
+

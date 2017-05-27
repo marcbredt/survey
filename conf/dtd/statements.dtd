@@ -1,0 +1,4 @@
+<!ELEMENT root (statements+)>
+<!ELEMENT statements (statement*)>
+<!ELEMENT statement (#PCDATA|statement)*>
+<!ATTLIST statement name CDATA #REQUIRED provides CDATA #IMPLIED>

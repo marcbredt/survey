@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<root>
+  <errors default="0000">
+    <error eid="0000" name="unknown">
+      <de>Entschuldigung. Das hätte nicht passieren dürfen.</de>
+      <en>Sorry. This should not have happened.</en>
+    </error>
+    <error eid="0001" name="paramnotarray">
+      <de>Parameter wurden nicht als Array übergeben.</de>
+      <en>Parameters not provides as array.</en>
+    </error>
+    <error eid="0002" name="paramnumber">
+      <de>Parameter wurden nicht als Array übergeben.</de>
+      <en>Parameters not provides as array.</en>
+    </error>
+    <error eid="0003" name="dbexception">
+      <de>Es sind Probleme bei der Datenbankanbindung aufgetreten.</de>
+      <en>Database connection problems occured.</en>
+    </error>
+    <error eid="0004" name="langexception">
+      <de>Es sind Sprachfehler wahrgenommen worden.</de>
+      <en>Language errors detected.</en>
+    </error>
+    <error eid="0005" name="maskerror">
+      <de>Es sind Inhaltsfehler aufgetreten.</de>
+      <en>Content errors occured.</en>
+    </error>
+    <error eid="0006" name="loginexception">
+      <de>Die eingegebenen Zugangsdaten sind ungültig.</de>
+      <en>Credentials entered are invalid.</en>
+    </error>
+  </errors>
+</root>

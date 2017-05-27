@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<root>
+
+  <directories>
+    <directory name="css"	path="./css" />
+    <directory name="conf"	path="../conf" />
+    <directory name="dtd"	path="../conf/dtd" />
+    <directory name="lang"	path="../conf/lang" />
+  </directories>
+
+  <languages default="de">
+    <language active="y" name="de" />
+    <language active="y" name="en" />
+    <language active="n" name="pl" />
+  </languages>
+
+  <requestkeys>
+    <requestkey name="cookie" 
+                value="/(lang=[a-z]{2}|pid=([a-z]|[A-Z]|[0-9]){32})*/" />
+  </requestkeys>
+
+  <querykeys>
+
+    <querykey name="eid" methods="get" value="/[0-9]{4}/" />
+
+    <querykey name="email" methods="get,post" 
+              value="/([a-z]|[0-9]|\.)+@([a-z|[0-9]])+\.([a-z])+){5,80}/" />
+
+    <querykey name="password" methods="get,post" value="/([a-z]|[0-9]+){32}/" />
+
+    <querykey name="token" methods="get" value="/([a-z]|[0-9]+){32}/" />
+
+    <querykey name="action" methods="get" value="/login|logout|store/" />
+    
+    <querykey name="mask" methods="get" value="/survey/" />
+
+    <querykey name="sname" methods="get" value="/[a-z]|[0-9])+/" />
+
+    <querykey name="page" methods="get" value="/[1-9]+([0-9])*/" />
+
+  </querykeys>
+  
+</root>

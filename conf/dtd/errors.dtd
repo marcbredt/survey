@@ -1,0 +1,7 @@
+<!ELEMENT root (errors)>
+<!ELEMENT errors (error*)>
+<!ATTLIST errors default CDATA #REQUIRED>
+<!ELEMENT error (de+,en+)>
+<!ATTLIST error eid CDATA #REQUIRED name CDATA #REQUIRED>
+<!ELEMENT de (#PCDATA)>
+<!ELEMENT en (#PCDATA)>

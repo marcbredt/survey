@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<root>
+
+  <authenticates>
+ 
+    <auth required="y" target="_get" element="mask" values="*" />
+    <auth required="y" target="_post" element="action" 
+          values="logout,selectsurvey,abortsurvey,submitsurvey,confirmsurvey" />
+
+  </authenticates>
+
+</root>

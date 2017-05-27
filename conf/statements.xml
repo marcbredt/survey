@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<root>
+
+  <statements>
+
+    <statement name="languages">
+      select lab, text from language;
+    </statement>
+
+    <statement name="checkcred">
+      select cid, firstname, lastname, email, md5(:pass)=password as valid from user where email = :email;
+    </statement>
+
+    <statement name="surveys">
+      select s.sid, l.lab, l.text from surveys as s join r_langtext as rl join langtext as l on s.sid = rl.sid and rl.ltid = l.ltid and l.lab = :lab;
+    </statement>
+   
+    <statement name="survey_num_questions">
+      select count(*) as qnum from surveys as s join questions as q on s.sid = q.sid and s.sid = :sid;
+    </statement>
+
+    <statement name="survey_title_only">
+      select s.sid, l.text as stitle from surveys as s join r_langtext as rl join langtext as l on s.sid = :sid and s.sid = rl.sid and rl.ltid = l.ltid and l.lab = :lab;
+    </statement>
+    
+    <statement name="survey_questions_only">
+      select s.sid, q.qid, l.lab, l.text from surveys as s join questions as q join r_langtext as rl join langtext as l on s.sid = q.sid and s.sid = :sid and q.qid = rl.qid and rl.ltid = l.ltid and l.lab = :lab;
+    </statement>
+
+    <statement name="survey_answers_only">
+      select s.sid, q.qid, a.aid, a.paid, t.name as type, l.lab, l.text from surveys as s join questions as q join answers as a join atypes as t join r_langtext as rl join langtext as l on s.sid = q.sid and s.sid = :sid and q.qid = a.qid and a.qid = :qid and a.atype = t.atid and a.aid = rl.aid and rl.ltid = l.ltid and l.lab = :lab;
+    </statement>
+
+    <!-- tree execution -->
+    <statement name="survey" provides="name,lab">
+      select s.name, l.lab, l.text as stitle from surveys as s join langtext as l on s.name = :sname and s.ltid = l.ltid and l.lab = :lab;
+      <statement name="survey_questions" provides="qid,lab">
+        select q.qid, l.lab, l.text from questions as q join langtext as l on q.snid = :name and q.ltid = l.ltid and l.lab = :lab;
+        <statement name="survey_questions_answers" provides="atype">
+          select distinct a.aid, a.paid, a.qid, l.text, l.ref, t.name from answers as a join langtext as l join atypes as t on a.qid = :qid and a.ltid = l.ltid and l.lab = :lab and a.atype = t.atid;
+        </statement>
+      </statement>
+    </statement>
+
+    <statement name="surveyaccomplished">
+      select cid, snid from accomplished where cid = :cid and snid = :snid;
+    </statement>
+
+  </statements>
+
+</root>

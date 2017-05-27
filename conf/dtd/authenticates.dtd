@@ -1,0 +1,5 @@
+<!ELEMENT root (authenticates+)>
+<!ELEMENT authenticates (auth+)>
+<!ELEMENT auth EMPTY>
+<!ATTLIST auth required CDATA #REQUIRED target CDATA #REQUIRED 
+               element CDATA #REQUIRED values CDATA #REQUIRED>

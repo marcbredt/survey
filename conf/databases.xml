@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<root>
+
+  <databases default="local">
+
+    <database name="local">
+      <type>mysql</type>
+      <host>localhost</host>
+      <port>3306</port>
+      <user>magixsurvey</user>
+      <pass>magixsurvey</pass>
+      <db>magixsurvey</db>
+      <ssl>false</ssl>
+      <persistent>true</persistent>
+      <charset>utf8</charset>
+      <timeout>10</timeout>
+    </database>
+
+  </databases>
+
+</root>
